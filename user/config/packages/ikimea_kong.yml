@@ -1,0 +1,10 @@
+ikimea_kong:
+  service_name: "users"
+  gateway:
+    url: 'http://kong'
+    port: 8001
+    apis:
+        user:
+            uris: /users
+            upstream_url : http://nginx_user/
+

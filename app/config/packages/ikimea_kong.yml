@@ -1,0 +1,9 @@
+ikimea_kong:
+  service_name: "recipes"
+  gateway:
+    url: 'http://kong'
+    port: 8001
+    apis:
+        recipes:
+            uris: /recipes
+            upstream_url : http://nginx_app/recipes
